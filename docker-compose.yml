@@ -1,0 +1,37 @@
+version: '2'
+services:
+  nodeguy:
+    image: node-web-server:latest
+    ports:
+      - 8000:8000
+    restart: always
+    environment:
+      MONGODB_URL: mongodb
+      MONGODB_PORT: 27017
+    depends_on:
+      - mongodb
+    networks:
+      - bridge-network
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      - bridge-network
+  pythonguy:
+    image: upm-data:latest
+    restart: always
+    environment:
+      HTTPServer_URL: nodeguy
+      HTTPServer_PORT: 8000 
+    privileged: true 
+    networks:
+      - bridge-network
+    depends_on:
+      - nodeguy
+      - mongodb
+networks:
+    bridge-network:
+     driver: bridge
