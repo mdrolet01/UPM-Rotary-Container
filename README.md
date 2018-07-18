@@ -10,7 +10,7 @@ Plug in the Rotary sensor to A0 (Analog pin 0)<br>
 Make sure docker engine is installed on your computer<br>
 <br>
 <h2>Instructions:</h2>
-`git clone https://github.com/mdrolet01/upm-rotary-http.git ` <br>
+`git clone <a href="https://github.com/mdrolet01/upm-rotary-http.git"></a> ` <br>
 `cd upm-rotary-http` <br>
 `cd node-container`<br>
 `docker build . -t node-web-server` <br>
