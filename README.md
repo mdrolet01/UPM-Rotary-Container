@@ -1,10 +1,10 @@
 # upm-rotary-http
 <h2>This is the HTTP container for sending/receiving sensor data</h2>
-First, you will need an UpSquared Board  
-Next, connect the GROVEPI shield onto the board  
-Plug in the Rotary sensor to A0 (Analog pin 0)  
-Make sure docker engine is installed on your computer  
-Clone the repository and type in the following:  
+First, you will need an UpSquared Board <br>
+Next, connect the GROVEPI shield onto the board <br>
+Plug in the Rotary sensor to A0 (Analog pin 0)   <br>
+Make sure docker engine is installed on your computer   <br>
+Clone the repository and type in the following:   <br>
 
 `git clone https://github.com/mdrolet01/upm-rotary-http.git` <br>
 `cd upm-rotary-http` <br>
